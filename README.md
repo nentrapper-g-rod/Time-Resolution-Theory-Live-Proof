@@ -53,6 +53,25 @@ Identical behavior to the double-slit when scaled by TRT's κ = 10⁴ factor.
 
 Time Resolution Theory in real time. Watch quantum mechanics disappear.
 
+## 📖 Theoretical Foundation
+
+This experiment is a live demonstration of **Time Resolution Theory (TRT)**, a deterministic framework proposing that quantum uncertainty, superposition, and mass are artifacts of limited temporal resolution—not fundamental properties of nature.
+
+**[Read the full TRT paper →](TRT_Theory.md)**
+
+**Key concepts:**
+- **Mass is frozen energy**: What we observe as mass is energy vibrating too fast for our instruments to resolve
+- **Superposition is a blur**: Like a slow camera shutter blurs a fast object, coarse time resolution blurs quantum paths
+- **Deterministic universe**: Quantum randomness arises from measurement limits, not fundamental indeterminacy
+
+**Core equation:**
+```
+m = (E - γ·ℏ/Δt) / c²
+```
+Where improving temporal resolution (smaller Δt) reduces observed mass, revealing the underlying energy motion.
+
+**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - Free to share with attribution.
+
 ## 🔬 Auto-Validation System
 
 The experiment runs **7 automated phases** in a continuous loop, each lasting 5 minutes:

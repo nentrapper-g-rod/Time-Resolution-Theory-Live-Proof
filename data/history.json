@@ -147,6 +147,23 @@
         "variance": 0.0
       },
       "sample_count": 102822
+    },
+    {
+      "timestamp": "2025-12-01T10:50:02.322175",
+      "timestamp_ms": 272019,
+      "delta_t_100ms": {
+        "mean": 0.111233,
+        "variance": 0.00067
+      },
+      "delta_t_10ms": {
+        "mean": 0.098879,
+        "variance": 0.000458
+      },
+      "delta_t_1ms": {
+        "mean": 0.095897,
+        "variance": 0.0
+      },
+      "sample_count": 102822
     }
   ],
   "control_on.json": [
@@ -285,6 +302,23 @@
         "variance": 0.0
       },
       "sample_count": 140006
+    },
+    {
+      "timestamp": "2025-12-01T10:50:02.322205",
+      "timestamp_ms": 599903,
+      "delta_t_100ms": {
+        "mean": 0.259697,
+        "variance": 1e-05
+      },
+      "delta_t_10ms": {
+        "mean": 0.260212,
+        "variance": 1e-05
+      },
+      "delta_t_1ms": {
+        "mean": 0.263516,
+        "variance": 0.0
+      },
+      "sample_count": 188102
     }
   ],
   "sweep_100hz.json": [
@@ -423,6 +457,23 @@
         "variance": 0.0
       },
       "sample_count": 373914
+    },
+    {
+      "timestamp": "2025-12-01T10:50:02.322227",
+      "timestamp_ms": 863634,
+      "delta_t_100ms": {
+        "mean": 0.200998,
+        "variance": 0.003969
+      },
+      "delta_t_10ms": {
+        "mean": 0.198322,
+        "variance": 0.003553
+      },
+      "delta_t_1ms": {
+        "mean": 0.25707,
+        "variance": 0.0
+      },
+      "sample_count": 221691
     }
   ],
   "sweep_1khz.json": [
@@ -561,6 +612,23 @@
         "variance": 0.0
       },
       "sample_count": 767039
+    },
+    {
+      "timestamp": "2025-12-01T10:50:02.322245",
+      "timestamp_ms": 994818,
+      "delta_t_100ms": {
+        "mean": 0.231548,
+        "variance": 0.000735
+      },
+      "delta_t_10ms": {
+        "mean": 0.204205,
+        "variance": 0.000484
+      },
+      "delta_t_1ms": {
+        "mean": 0.244176,
+        "variance": 0.0
+      },
+      "sample_count": 250803
     }
   ],
   "sweep_10khz.json": [
@@ -685,6 +753,23 @@
     },
     {
       "timestamp": "2025-12-01T10:40:01.942120",
+      "timestamp_ms": 1485569,
+      "delta_t_100ms": {
+        "mean": 0.237229,
+        "variance": 4e-05
+      },
+      "delta_t_10ms": {
+        "mean": 0.23652,
+        "variance": 3.4e-05
+      },
+      "delta_t_1ms": {
+        "mean": 0.24337,
+        "variance": 0.0
+      },
+      "sample_count": 1156282
+    },
+    {
+      "timestamp": "2025-12-01T10:50:02.322260",
       "timestamp_ms": 1485569,
       "delta_t_100ms": {
         "mean": 0.237229,
@@ -837,6 +922,23 @@
         "variance": 0.0
       },
       "sample_count": 1366374
+    },
+    {
+      "timestamp": "2025-12-01T10:50:02.322275",
+      "timestamp_ms": 1747384,
+      "delta_t_100ms": {
+        "mean": 0.238067,
+        "variance": 4e-05
+      },
+      "delta_t_10ms": {
+        "mean": 0.234103,
+        "variance": 3.6e-05
+      },
+      "delta_t_1ms": {
+        "mean": 0.228864,
+        "variance": 0.0
+      },
+      "sample_count": 1366374
     }
   ],
   "live_trt.json": [
@@ -961,6 +1063,23 @@
     },
     {
       "timestamp": "2025-12-01T10:40:01.942146",
+      "timestamp_ms": 35970298,
+      "delta_t_100ms": {
+        "mean": 0.239091,
+        "variance": 4.5e-05
+      },
+      "delta_t_10ms": {
+        "mean": 0.239582,
+        "variance": 4.8e-05
+      },
+      "delta_t_1ms": {
+        "mean": 0.249817,
+        "variance": 0.0
+      },
+      "sample_count": 28882896
+    },
+    {
+      "timestamp": "2025-12-01T10:50:02.322290",
       "timestamp_ms": 35970298,
       "delta_t_100ms": {
         "mean": 0.239091,

@@ -59,3 +59,27 @@ Time Resolution Theory in real time. Watch quantum mechanics disappear.
 3. Run: Hardware auto-updates this repo every minute.
 
 **v1.0.0** – Initial live proof deploy (Nov 24, 2025).
+
+### What you’re actually seeing (in plain English)
+
+We took one tiny purple LED and made it flash on/off **10,000 times per second** — way too fast for your eye to see.
+
+Then we looked at it three different ways:
+
+| How fast we look (Δt) | What we see | Why it matters |
+|-----------------------|-------------|----------------|
+| **0.1 second** (slow, like your eye) | A perfectly steady glow at exactly 50 % brightness | The fast flashing averages out — looks “always half-on” |
+| **0.01 second** (10× faster) | Still basically steady 50 % | Still too slow to see the individual flashes |
+| **0.001 second** (100× faster) | Suddenly it flickers wildly | Now we can see the real on/off pulses |
+
+That’s it.
+
+This is **exactly** what quantum physicists claim happens in the double-slit experiment — except they say the particle is “in two places at once” or “collapses randomly.”
+
+We just showed it’s neither.
+
+It’s just flashing really fast and we’re looking too slowly.
+
+Same math. Same result. No magic. No collapse. Just a bad clock.
+
+Watch it run 24/7. The data updates every minute. The experiment never lies.

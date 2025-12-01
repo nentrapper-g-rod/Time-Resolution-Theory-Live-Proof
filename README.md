@@ -48,16 +48,55 @@ Identical behavior to the double-slit when scaled by TRT's κ = 10⁴ factor.
 
 **Quantum collapse = bad clock. That's it.**
 
-**Hardware:** Arduino Uno + Ethernet Shield (W5500), 405 nm LED, BPW34 photodiode.  
-**Software:** Single sketch pulses LED, samples data, POSTs JSON to this repo.  
+**Hardware:** Arduino GIGA R1 WiFi + GIGA Display Shield (480x800), 405 nm LED, BPW34 photodiode.
+**Software:** Automated 7-phase validation system, samples data, POSTs JSON to this repo every 60s.
 
 Time Resolution Theory in real time. Watch quantum mechanics disappear.
 
-## Setup
-1. Clone: `git clone https://github.com/nentrapper-g-rod/Time-Resolution-Theory-Live-Proof.git`
-2. Flash Arduino: [arduino/led_pulse.ino](arduino/led_pulse.ino)
-3. Run: Hardware auto-updates this repo every minute.
+## 🔬 Auto-Validation System
 
+The experiment runs **7 automated phases** in a continuous loop, each lasting 5 minutes:
+
+1. **Phase 0: LED OFF** → Control test (expect mean ≈ 0V, variance ≈ 0)
+2. **Phase 1: LED ON** → Control test (expect mean ≈ 1V, variance ≈ 0)
+3. **Phase 2: 100 Hz** → Frequency sweep (visible flicker, high variance)
+4. **Phase 3: 1 kHz** → Frequency sweep (moderate variance)
+5. **Phase 4: 10 kHz** → Frequency sweep (low variance)
+6. **Phase 5: 20 kHz** → Frequency sweep (minimal variance)
+7. **Phase 6: LIVE TRT** → Main 10 kHz experiment (runs forever)
+
+Each phase uploads data to separate JSON files, and graphs are auto-generated every 10 minutes.
+
+## Setup & Installation
+
+### Hardware Requirements
+- Arduino GIGA R1 WiFi
+- Arduino GIGA Display Shield
+- 405 nm LED
+- BPW34 photodiode
+- WiFi network connection
+
+### Software Setup
+1. Clone repository:
+   ```bash
+   git clone https://github.com/nentrapper-g-rod/Time-Resolution-Theory-Live-Proof.git
+   cd Time-Resolution-Theory-Live-Proof
+   ```
+
+2. Flash Arduino with auto-validation sketch:
+   - Open `arduino/TRT_Auto_Validation.ino`
+   - Update WiFi credentials and GitHub token
+   - Upload to Arduino GIGA R1 WiFi
+
+3. Set up automated graph generation (optional):
+   - Edit `update_graphs.sh` and add your GitHub token
+   - Make executable: `chmod +x update_graphs.sh`
+   - Add to crontab: `crontab -e`
+   - Add line: `*/10 * * * * /path/to/update_graphs.sh >> ~/trt_graphs.log 2>&1`
+
+4. Run: Hardware auto-updates this repo every 60 seconds with new data.
+
+**v2.0.0** – Auto-validation system with GIGA Display (Nov 30, 2025).
 **v1.0.0** – Initial live proof deploy (Nov 24, 2025).
 
 ### What you’re actually seeing (in plain English)

@@ -1,17 +1,17 @@
 {
   "delta_t_100ms": {
-    "mean": 0.239727,
-    "variance": 0.000048
+    "mean": 0.239155,
+    "variance": 0.000045
   },
   "delta_t_10ms": {
-    "mean": 0.241597,
-    "variance": 0.000051
+    "mean": 0.238857,
+    "variance": 0.000048
   },
   "delta_t_1ms": {
-    "mean": 0.248205,
+    "mean": 0.231282,
     "variance": 0.000000
   },
-  "timestamp_ms": 28154754,
-  "sample_count": 22714411,
-  "timestamp_iso": "28154s"
+  "timestamp_ms": 28220592,
+  "sample_count": 22767107,
+  "timestamp_iso": "28220s"
 }

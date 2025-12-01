@@ -2,6 +2,29 @@
 
 **The first continuously running, public experiment proving quantum "superposition" is a temporal-resolution artifact.**
 
+## 📖 Theoretical Foundation
+
+This experiment is a live demonstration of **Time Resolution Theory (TRT)**, a deterministic framework proposing that quantum uncertainty, superposition, and mass are artifacts of limited temporal resolution—not fundamental properties of nature.
+
+**[Read the full TRT paper →](TRT_Theory.md)**
+
+**Key concepts:**
+- **Mass is frozen energy**: What we observe as mass is energy vibrating too fast for our instruments to resolve
+- **Superposition is a blur**: Like a slow camera shutter blurs a fast object, coarse time resolution blurs quantum paths
+- **Deterministic universe**: Quantum randomness arises from measurement limits, not fundamental indeterminacy
+
+**Core equation:**
+```
+m = (E - γ·ℏ/Δt) / c²
+```
+Where improving temporal resolution (smaller Δt) reduces observed mass, revealing the underlying energy motion.
+
+**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - Free to share with attribution.
+
+---
+
+## 🔬 Live Experiment
+
 A single 405 nm LED is pulsed at exactly 10 kHz (50% duty). A photodiode measures perceived intensity under three observer resolutions Δt = 0.1 s, 0.01 s, and 0.001 s.
 
 **Result (updated every 60 s):**
@@ -51,26 +74,7 @@ Identical behavior to the double-slit when scaled by TRT's κ = 10⁴ factor.
 **Hardware:** Arduino GIGA R1 WiFi + GIGA Display Shield (480x800), 405 nm LED, BPW34 photodiode.
 **Software:** Automated 7-phase validation system, samples data, POSTs JSON to this repo every 60s.
 
-Time Resolution Theory in real time. Watch quantum mechanics disappear.
-
-## 📖 Theoretical Foundation
-
-This experiment is a live demonstration of **Time Resolution Theory (TRT)**, a deterministic framework proposing that quantum uncertainty, superposition, and mass are artifacts of limited temporal resolution—not fundamental properties of nature.
-
-**[Read the full TRT paper →](TRT_Theory.md)**
-
-**Key concepts:**
-- **Mass is frozen energy**: What we observe as mass is energy vibrating too fast for our instruments to resolve
-- **Superposition is a blur**: Like a slow camera shutter blurs a fast object, coarse time resolution blurs quantum paths
-- **Deterministic universe**: Quantum randomness arises from measurement limits, not fundamental indeterminacy
-
-**Core equation:**
-```
-m = (E - γ·ℏ/Δt) / c²
-```
-Where improving temporal resolution (smaller Δt) reduces observed mass, revealing the underlying energy motion.
-
-**License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - Free to share with attribution.
+---
 
 ## 🔬 Auto-Validation System
 

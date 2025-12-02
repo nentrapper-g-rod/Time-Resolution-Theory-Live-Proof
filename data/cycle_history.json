@@ -103,4 +103,35 @@
     }
   }
 }
+,
+{
+  "cycle": 1,
+  "phase": 0,
+  "timestamp_iso": "2025-12-01T00:35:55Z",
+  "timestamp_ms": 2155365,
+  "statistics": {
+    "delta_t_100ms": {
+      "mean": 0.337124,
+      "variance": 0.028391
+    },
+    "delta_t_10ms": {
+      "mean": 0.328469,
+      "variance": 0.027930
+    },
+    "delta_t_1ms": {
+      "mean": 0.281245,
+      "variance": 0.0
+    }
+  },
+  "baseline_test": {
+    "passed": false,
+    "mean_voltage": 0.283372,
+    "variance": 0.025615
+  },
+  "hardware_test": {
+    "passed": true,
+    "dark_voltage": 0.243290,
+    "light_voltage": 0.244990
+  }
+}
 ]

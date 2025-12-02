@@ -47,6 +47,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T21:50:02.020514",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "control_on.json": [
@@ -92,6 +100,24 @@
     },
     {
       "timestamp": "2025-12-01T21:40:02.149017",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T21:50:02.020549",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    }
+  ],
+  "sweep_100hz.json": [
+    {
+      "timestamp": "2025-12-01T21:50:02.020614",
       "timestamp_ms": 0,
       "delta_t_100ms": {},
       "delta_t_10ms": {},

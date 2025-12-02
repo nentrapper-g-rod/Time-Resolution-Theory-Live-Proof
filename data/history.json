@@ -31,6 +31,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T21:30:01.391481",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "control_on.json": [
@@ -60,6 +68,14 @@
     },
     {
       "timestamp": "2025-12-01T21:20:01.808463",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T21:30:01.391514",
       "timestamp_ms": 0,
       "delta_t_100ms": {},
       "delta_t_10ms": {},

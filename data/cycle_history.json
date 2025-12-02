@@ -386,4 +386,25 @@
     "light_voltage": 0.410025
   }
 }
+,
+{
+  "cycle": 1,
+  "phase": 1,
+  "timestamp_iso": "2025-12-01T00:41:00Z",
+  "timestamp_ms": 2460543,
+  "statistics": {
+    "delta_t_100ms": {
+      "mean": 0.110073,
+      "variance": 0.000451
+    },
+    "delta_t_10ms": {
+      "mean": 0.114593,
+      "variance": 0.000483
+    },
+    "delta_t_1ms": {
+      "mean": 0.076557,
+      "variance": 0.0
+    }
+  }
+}
 ]

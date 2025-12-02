@@ -39,6 +39,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T20:10:01.595714",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "control_on.json": [
@@ -65,6 +73,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T20:10:01.595755",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "sweep_100hz.json": [
@@ -78,6 +94,14 @@
     },
     {
       "timestamp": "2025-12-01T20:00:01.790074",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T20:10:01.595786",
       "timestamp_ms": 0,
       "delta_t_100ms": {},
       "delta_t_10ms": {},
@@ -101,6 +125,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T20:10:01.595811",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "sweep_10khz.json": [
@@ -111,11 +143,37 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T20:10:01.595833",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "sweep_20khz.json": [
     {
       "timestamp": "2025-12-01T20:00:01.790180",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-01T20:10:01.595857",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    }
+  ],
+  "live_trt.json": [
+    {
+      "timestamp": "2025-12-01T20:10:01.595874",
       "timestamp_ms": 0,
       "delta_t_100ms": {},
       "delta_t_10ms": {},

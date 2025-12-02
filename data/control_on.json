@@ -1,0 +1,19 @@
+{
+  "cycle_0": {
+    "timestamp_iso": "2025-12-01T00:06:09Z",
+    "timestamp_ms": 369538,
+    "sample_count": 168728,
+    "delta_t_100ms": {
+      "mean": 0.333643,
+      "variance": 0.000001
+    },
+    "delta_t_10ms": {
+      "mean": 0.333707,
+      "variance": 0.000001
+    },
+    "delta_t_1ms": {
+      "mean": 0.331209,
+      "variance": 0.000000
+    }
+  }
+}

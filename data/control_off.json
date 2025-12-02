@@ -556,4 +556,22 @@
       "variance": 0.000000
     }
   }
+,
+  "cycle_0": {
+    "timestamp_iso": "2025-12-01T00:01:43Z",
+    "timestamp_ms": 103197,
+    "sample_count": 16871,
+    "delta_t_100ms": {
+      "mean": 0.113207,
+      "variance": 0.000447
+    },
+    "delta_t_10ms": {
+      "mean": 0.105004,
+      "variance": 0.000521
+    },
+    "delta_t_1ms": {
+      "mean": 0.141026,
+      "variance": 0.000000
+    }
+  }
 }

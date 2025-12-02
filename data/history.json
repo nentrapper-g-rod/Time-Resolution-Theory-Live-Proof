@@ -591,6 +591,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T09:10:02.264214",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "control_on.json": [
@@ -1185,6 +1193,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T09:10:02.264260",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "sweep_100hz.json": [
@@ -1731,6 +1747,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T09:10:02.264286",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "sweep_1khz.json": [
@@ -2264,6 +2288,14 @@
     },
     {
       "timestamp": "2025-12-02T09:00:01.914018",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T09:10:02.264305",
       "timestamp_ms": 0,
       "delta_t_100ms": {},
       "delta_t_10ms": {},

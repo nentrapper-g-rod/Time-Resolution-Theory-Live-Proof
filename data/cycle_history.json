@@ -208,4 +208,25 @@
     }
   }
 }
+,
+{
+  "cycle": 0,
+  "phase": 1,
+  "timestamp_iso": "2025-12-01T00:05:33Z",
+  "timestamp_ms": 333429,
+  "statistics": {
+    "delta_t_100ms": {
+      "mean": 0.101385,
+      "variance": 0.000599
+    },
+    "delta_t_10ms": {
+      "mean": 0.100491,
+      "variance": 0.000620
+    },
+    "delta_t_1ms": {
+      "mean": 0.086227,
+      "variance": 0.0
+    }
+  }
+}
 ]

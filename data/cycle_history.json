@@ -1,0 +1,22 @@
+[
+{
+  "cycle": 0,
+  "phase": 1,
+  "timestamp_iso": "2025-12-01T00:05:27Z",
+  "timestamp_ms": 327342,
+  "statistics": {
+    "delta_t_100ms": {
+      "mean": 0.217671,
+      "variance": 0.000155
+    },
+    "delta_t_10ms": {
+      "mean": 0.217582,
+      "variance": 0.000147
+    },
+    "delta_t_1ms": {
+      "mean": 0.228059,
+      "variance": 0.0
+    }
+  }
+}
+]

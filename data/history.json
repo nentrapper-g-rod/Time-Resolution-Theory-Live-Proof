@@ -471,6 +471,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T06:40:01.975691",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "control_on.json": [
@@ -945,6 +953,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T06:40:01.975743",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "sweep_100hz.json": [
@@ -1371,6 +1387,14 @@
       "delta_t_10ms": {},
       "delta_t_1ms": {},
       "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T06:40:01.975772",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
     }
   ],
   "sweep_1khz.json": [
@@ -1784,6 +1808,14 @@
     },
     {
       "timestamp": "2025-12-02T06:30:01.960080",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    },
+    {
+      "timestamp": "2025-12-02T06:40:01.975793",
       "timestamp_ms": 0,
       "delta_t_100ms": {},
       "delta_t_10ms": {},

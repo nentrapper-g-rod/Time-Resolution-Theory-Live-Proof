@@ -1,0 +1,12 @@
+{
+  "control_off.json": [
+    {
+      "timestamp": "2025-12-01T19:20:02.124707",
+      "timestamp_ms": 0,
+      "delta_t_100ms": {},
+      "delta_t_10ms": {},
+      "delta_t_1ms": {},
+      "sample_count": 0
+    }
+  ]
+}

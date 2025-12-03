@@ -19,7 +19,7 @@
   },
   "baseline_test": {
     "passed": true,
-    "mean_voltage": 0.1133,
+    "mean_voltage": 0.113837,
     "min_voltage": 0.067692,
     "max_voltage": 0.147473,
     "variance": 0.00049387

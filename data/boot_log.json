@@ -19,10 +19,10 @@
   },
   "baseline_test": {
     "passed": true,
-    "mean_voltage": 0.109764,
+    "mean_voltage": 0.110473,
     "min_voltage": 0.050769,
-    "max_voltage": 0.147473,
-    "variance": 0.00046183
+    "max_voltage": 0.141026,
+    "variance": 0.0004191
   },
   "wifi": {
     "connected": true,

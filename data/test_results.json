@@ -1,0 +1,16 @@
+{
+  "timestamp": "690s",
+  "baseline_test": {
+    "passed": true,
+    "mean_voltage": 0.109030,
+    "min_voltage": 0.050769,
+    "max_voltage": 0.145055,
+    "variance": 0.00043384
+  },
+  "hardware_test": {
+    "passed": true,
+    "dark_voltage": 0.120942,
+    "light_voltage": 0.411790,
+    "fifty_percent": 0.266501
+  }
+}

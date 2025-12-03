@@ -1,0 +1,33 @@
+{
+  "boot_timestamp": "2025-12-01T00:00:01Z",
+  "boot_millis": 1627,
+  "sd_card": {
+    "status": "FAILED"
+  },
+  "hardware_health_check": {
+    "passed": true,
+    "dark_voltage": 0.120802,
+    "light_voltage": 0.411777,
+    "range": 0.290975
+  },
+  "calibration": {
+    "dark_voltage": 0.120419,
+    "light_voltage": 0.411765,
+    "target_50_percent": 0.266092,
+    "calibrated_pwm": 64,
+    "actual_50_percent": 0.265363
+  },
+  "baseline_test": {
+    "passed": true,
+    "mean_voltage": 0.10945,
+    "min_voltage": 0.041905,
+    "max_voltage": 0.141026,
+    "variance": 0.00045767
+  },
+  "wifi": {
+    "connected": true,
+    "ssid": "Girod-House-of-Big-Nuts",
+    "ip_address": "192.168.1.91",
+    "rssi_dbm": -58
+  }
+}

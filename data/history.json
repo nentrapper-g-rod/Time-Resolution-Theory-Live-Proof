@@ -5067,9 +5067,47 @@
           "variance": 0.0
         }
       }
+    },
+    {
+      "cycle_0": {
+        "timestamp_iso": "2025-12-01T00:02:53Z",
+        "timestamp_ms": 173021,
+        "sample_count": 29012,
+        "delta_t_100ms": {
+          "mean": 0.111684,
+          "variance": 0.000459
+        },
+        "delta_t_10ms": {
+          "mean": 0.105326,
+          "variance": 0.000402
+        },
+        "delta_t_1ms": {
+          "mean": 0.084615,
+          "variance": 0.0
+        }
+      }
     }
   ],
   "control_on_history": [
+    {
+      "cycle_0": {
+        "timestamp_iso": "2025-12-01T00:05:41Z",
+        "timestamp_ms": 341874,
+        "sample_count": 42603,
+        "delta_t_100ms": {
+          "mean": 0.110193,
+          "variance": 0.000398
+        },
+        "delta_t_10ms": {
+          "mean": 0.119912,
+          "variance": 0.000295
+        },
+        "delta_t_1ms": {
+          "mean": 0.086227,
+          "variance": 0.0
+        }
+      }
+    },
     {
       "cycle_0": {
         "timestamp_iso": "2025-12-01T00:05:41Z",
@@ -10087,9 +10125,47 @@
           "variance": 0.0
         }
       }
+    },
+    {
+      "cycle_0": {
+        "timestamp_iso": "2025-12-01T00:13:47Z",
+        "timestamp_ms": 827818,
+        "sample_count": 94798,
+        "delta_t_100ms": {
+          "mean": 0.271446,
+          "variance": 0.01776
+        },
+        "delta_t_10ms": {
+          "mean": 0.273751,
+          "variance": 0.019009
+        },
+        "delta_t_1ms": {
+          "mean": 0.099121,
+          "variance": 0.0
+        }
+      }
     }
   ],
   "sweep_1khz_history": [
+    {
+      "cycle_0": {
+        "timestamp_iso": "2025-12-01T00:20:40Z",
+        "timestamp_ms": 1240128,
+        "sample_count": 409338,
+        "delta_t_100ms": {
+          "mean": 0.0,
+          "variance": 0.0
+        },
+        "delta_t_10ms": {
+          "mean": 0.0,
+          "variance": 0.0
+        },
+        "delta_t_1ms": {
+          "mean": 0.0,
+          "variance": 0.0
+        }
+      }
+    },
     {
       "cycle_0": {
         "timestamp_iso": "2025-12-01T00:20:40Z",
@@ -16939,6 +17015,39 @@
       "mean10": 0.092513,
       "var10": 0.00049963,
       "mean1": 0.133773,
+      "githubStatus": "HOST_POSTS",
+      "githubCode": 0,
+      "lastSuccess": 0,
+      "baseline": {
+        "passed": true,
+        "mean": 0.104212,
+        "variance": 0.00057401,
+        "min": 0.043516,
+        "max": 0.144249
+      },
+      "hardware": {
+        "passed": true,
+        "dark": 0.117476,
+        "light": 0.410155,
+        "fifty": 0.265363
+      }
+    },
+    {
+      "timestamp": "2025-12-01T02:02:06Z",
+      "timestamp_ms": 7326007,
+      "cycle": 3,
+      "phase": 2,
+      "phase_name": "100 Hz",
+      "ssid": "Girod-House-of-Big-Nuts",
+      "ip": "192.168.1.91",
+      "rssi": -65,
+      "samples": 3480845,
+      "runtime": 7326,
+      "mean100": 0.105334,
+      "var100": 0.0005949,
+      "mean10": 0.090418,
+      "var10": 0.00026571,
+      "mean1": 0.102344,
       "githubStatus": "HOST_POSTS",
       "githubCode": 0,
       "lastSuccess": 0,

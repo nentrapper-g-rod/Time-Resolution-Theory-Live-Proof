@@ -108,10 +108,24 @@
         "data/sweep_1khz.png",
         "live_data/trt_live_data.json"
       ]
+    },
+    {
+      "timestamp": "2025-12-02 21:43:56",
+      "files": [
+        "data/control_off.png",
+        "data/control_on.png",
+        "data/history.json",
+        "data/live_trt.json",
+        "data/live_trt.png",
+        "data/sweep_100hz.png",
+        "data/sweep_1khz.png",
+        "live_data/trt_live_data.json",
+        "scripts/activity.json"
+      ]
     }
   ],
   "stats": {
-    "total_pushes": 8,
-    "total_files": 69
+    "total_pushes": 9,
+    "total_files": 78
   }
 }

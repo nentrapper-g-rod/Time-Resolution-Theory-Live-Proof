@@ -75,10 +75,17 @@ def push_to_github():
 
         if result.returncode != 0:  # There are changes
             # Commit
-            timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')
             commit_msg = f"Auto-update TRT data and graphs - {timestamp}\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>"
             subprocess.run(
                 ["git", "commit", "-m", commit_msg],
+                cwd=REPO_DIR,
+                check=True
+            )
+
+            # Pull before pushing (in case of remote changes)
+            subprocess.run(
+                ["git", "pull", "origin", "main", "--no-rebase"],
                 cwd=REPO_DIR,
                 check=True
             )

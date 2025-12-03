@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 TRT Auto-Update Script
-Pulls data from Arduino every 30 seconds, generates graphs, and pushes to GitHub
+Pulls data from Arduino, generates graphs, and pushes to GitHub
 """
 
 import requests
@@ -11,17 +11,57 @@ import time
 from pathlib import Path
 from datetime import datetime
 
-# Configuration
-ARDUINO_IP = "http://192.168.1.91"
-UPDATE_INTERVAL = 30  # seconds
+# Paths
 REPO_DIR = Path("/home/joshuag/Time-Resolution-Theory-Live-Proof")
-DATA_DIR = REPO_DIR / "data"
-SCRIPTS_DIR = REPO_DIR / ".github" / "scripts"
+SCRIPTS_DIR = REPO_DIR / "scripts"
+CONFIG_FILE = SCRIPTS_DIR / "config.json"
+ACTIVITY_LOG = SCRIPTS_DIR / "activity.json"
 
-def fetch_arduino_data():
+def load_config():
+    """Load configuration"""
+    try:
+        with open(CONFIG_FILE) as f:
+            return json.load(f)
+    except:
+        return {
+            "arduino_ip": "http://192.168.1.91",
+            "update_interval": 30,
+            "repo_dir": str(REPO_DIR),
+            "data_dir": "data",
+            "github_enabled": True,
+            "max_history_points": 200
+        }
+
+def load_activity():
+    """Load activity log"""
+    try:
+        with open(ACTIVITY_LOG) as f:
+            return json.load(f)
+    except:
+        return {"pushes": [], "stats": {"total_pushes": 0, "total_files": 0}}
+
+def save_activity(activity):
+    """Save activity log"""
+    with open(ACTIVITY_LOG, 'w') as f:
+        json.dump(activity, f, indent=2)
+
+def log_push(files):
+    """Log a GitHub push"""
+    activity = load_activity()
+    activity["pushes"].append({
+        "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "files": files
+    })
+    # Keep last 100 pushes
+    activity["pushes"] = activity["pushes"][-100:]
+    activity["stats"]["total_pushes"] += 1
+    activity["stats"]["total_files"] += len(files)
+    save_activity(activity)
+
+def fetch_arduino_data(arduino_ip):
     """Fetch current data from Arduino"""
     try:
-        response = requests.get(f"{ARDUINO_IP}/data", timeout=5)
+        response = requests.get(f"{arduino_ip}/data", timeout=5)
         if response.status_code == 200:
             return response.json()
         else:
@@ -31,9 +71,9 @@ def fetch_arduino_data():
         print(f"❌ Error fetching Arduino data: {e}")
         return None
 
-def save_data(data, filename):
+def save_data(data, filename, data_dir):
     """Save data to JSON file"""
-    filepath = DATA_DIR / filename
+    filepath = REPO_DIR / data_dir / filename
     try:
         with open(filepath, 'w') as f:
             json.dump(data, f, indent=2)
@@ -46,7 +86,7 @@ def generate_graphs():
     """Run the graph generation script"""
     try:
         result = subprocess.run(
-            ["python3", str(SCRIPTS_DIR / "make_graphs.py")],
+            ["python3", str(REPO_DIR / ".github" / "scripts" / "make_graphs.py")],
             cwd=REPO_DIR,
             capture_output=True,
             text=True
@@ -61,6 +101,20 @@ def generate_graphs():
         print(f"❌ Error generating graphs: {e}")
         return False
 
+def get_changed_files():
+    """Get list of changed files"""
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--cached", "--name-only"],
+            cwd=REPO_DIR,
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return [f.strip() for f in result.stdout.split('\n') if f.strip()]
+    except:
+        return []
+
 def push_to_github():
     """Push changes to GitHub"""
     try:
@@ -74,6 +128,9 @@ def push_to_github():
         )
 
         if result.returncode != 0:  # There are changes
+            # Get list of files being committed
+            changed_files = get_changed_files()
+
             # Commit
             timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')
             commit_msg = f"Auto-update TRT data and graphs - {timestamp}\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>"
@@ -92,7 +149,10 @@ def push_to_github():
 
             # Push
             subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR, check=True)
-            print("✓ Pushed to GitHub")
+            print(f"✓ Pushed to GitHub ({len(changed_files)} files)")
+
+            # Log the push
+            log_push(changed_files)
             return True
         else:
             print("• No changes to push")
@@ -106,18 +166,24 @@ def push_to_github():
 
 def main():
     """Main loop"""
+    config = load_config()
+
     print("=" * 60)
     print("TRT AUTO-UPDATE SCRIPT")
     print("=" * 60)
-    print(f"Arduino: {ARDUINO_IP}")
-    print(f"Update interval: {UPDATE_INTERVAL} seconds")
-    print(f"Data directory: {DATA_DIR}")
+    print(f"Arduino: {config['arduino_ip']}")
+    print(f"Update interval: {config['update_interval']} seconds")
+    print(f"Data directory: {config['data_dir']}")
+    print(f"GitHub pushing: {'Enabled' if config['github_enabled'] else 'Disabled'}")
     print("=" * 60)
     print()
 
     iteration = 0
 
     while True:
+        # Reload config each iteration (allows live updates)
+        config = load_config()
+
         iteration += 1
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(f"\n[{timestamp}] Iteration #{iteration}")
@@ -125,35 +191,38 @@ def main():
 
         # Step 1: Fetch data from Arduino
         print("1. Fetching data from Arduino...")
-        data = fetch_arduino_data()
+        data = fetch_arduino_data(config['arduino_ip'])
 
         if data:
             print(f"   ✓ Received data: {data.get('samples', '?')} samples, phase {data.get('phase', '?')}")
 
             # Step 2: Save data locally
             print("2. Saving data locally...")
-            save_data(data, "live_trt.json")
+            save_data(data, "live_trt.json", config['data_dir'])
 
             # Also save to live_data directory for compatibility
-            live_data_dir = REPO_DIR / "live_data"
-            live_data_dir.mkdir(exist_ok=True)
-            save_data(data, "../live_data/trt_live_data.json")
+            live_data_dir = "live_data"
+            (REPO_DIR / live_data_dir).mkdir(exist_ok=True)
+            save_data(data, "trt_live_data.json", live_data_dir)
 
             # Step 3: Generate graphs
             print("3. Generating graphs...")
             generate_graphs()
 
-            # Step 4: Push to GitHub
-            print("4. Pushing to GitHub...")
-            push_to_github()
+            # Step 4: Push to GitHub (if enabled)
+            if config['github_enabled']:
+                print("4. Pushing to GitHub...")
+                push_to_github()
+            else:
+                print("4. GitHub pushing disabled (skipping)")
 
             print(f"✅ Cycle complete")
         else:
             print("⚠️  Skipping this cycle (no data)")
 
         # Wait for next iteration
-        print(f"\n⏳ Waiting {UPDATE_INTERVAL} seconds until next update...")
-        time.sleep(UPDATE_INTERVAL)
+        print(f"\n⏳ Waiting {config['update_interval']} seconds until next update...")
+        time.sleep(config['update_interval'])
 
 if __name__ == "__main__":
     try:

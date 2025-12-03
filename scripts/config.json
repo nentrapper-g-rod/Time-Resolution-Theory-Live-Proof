@@ -1,0 +1,10 @@
+{
+  "arduino_ip": "http://192.168.1.91",
+  "update_interval": 30,
+  "repo_dir": "/home/joshuag/Time-Resolution-Theory-Live-Proof",
+  "data_dir": "data",
+  "github_enabled": true,
+  "max_history_points": 200,
+  "web_server_port": 5000,
+  "web_server_host": "0.0.0.0"
+}

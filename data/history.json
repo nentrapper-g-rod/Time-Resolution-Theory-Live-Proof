@@ -17769,39 +17769,6 @@
   ],
   "live_trt_history": [
     {
-      "timestamp": "2025-12-01T01:01:29Z",
-      "timestamp_ms": 3689934,
-      "cycle": 1,
-      "phase": 5,
-      "phase_name": "20 kHz",
-      "ssid": "Girod-House-of-Big-Nuts",
-      "ip": "192.168.1.91",
-      "rssi": -61,
-      "samples": 1732164,
-      "runtime": 3689,
-      "mean100": 0.103996,
-      "var100": 0.00059665,
-      "mean10": 0.094125,
-      "var10": 0.00048482,
-      "mean1": 0.076557,
-      "githubStatus": "HOST_POSTS",
-      "githubCode": 0,
-      "lastSuccess": 0,
-      "baseline": {
-        "passed": true,
-        "mean": 0.103504,
-        "variance": 0.00064777,
-        "min": 0.049963,
-        "max": 0.145055
-      },
-      "hardware": {
-        "passed": true,
-        "dark": 0.116926,
-        "light": 0.411766,
-        "fifty": 0.265363
-      }
-    },
-    {
       "timestamp": "2025-12-01T01:02:03Z",
       "timestamp_ms": 3723793,
       "cycle": 1,
@@ -24351,6 +24318,39 @@
       "mean10": 0.095897,
       "var10": 0.00060642,
       "mean1": 0.137802,
+      "githubStatus": "HOST_POSTS",
+      "githubCode": 0,
+      "lastSuccess": 0,
+      "baseline": {
+        "passed": true,
+        "mean": 0.10578,
+        "variance": 0.00067487,
+        "min": 0.03707,
+        "max": 0.145055
+      },
+      "hardware": {
+        "passed": true,
+        "dark": 0.119555,
+        "light": 0.411523,
+        "fifty": 0.265363
+      }
+    },
+    {
+      "timestamp": "2025-12-01T03:21:09Z",
+      "timestamp_ms": 12069507,
+      "cycle": 5,
+      "phase": 4,
+      "phase_name": "10 kHz",
+      "ssid": "Girod-House-of-Big-Nuts",
+      "ip": "192.168.1.91",
+      "rssi": -62,
+      "samples": 6069691,
+      "runtime": 12069,
+      "mean100": 0.106148,
+      "var100": 0.00071973,
+      "mean10": 0.10041,
+      "var10": 0.00072113,
+      "mean1": 0.07011,
       "githubStatus": "HOST_POSTS",
       "githubCode": 0,
       "lastSuccess": 0,

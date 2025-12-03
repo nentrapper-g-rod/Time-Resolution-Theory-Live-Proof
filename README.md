@@ -115,7 +115,34 @@ Each phase uploads data to separate JSON files, and graphs are auto-generated ev
 - Arduino GIGA Display Shield
 - 405 nm LED
 - BPW34 photodiode
+- 220Ω resistor (LED current limiting)
+- 10kΩ resistor (photodiode load)
+- Breadboard and jumper wires
 - WiFi network connection
+
+### Hardware Wiring
+
+**LED Circuit (PWM Output):**
+```
+Arduino Pin 9 (PWM) → 220Ω Resistor → 405nm LED (+) → GND
+```
+
+**Photodiode Circuit (Analog Input):**
+```
++3.3V → BPW34 (Anode) → BPW34 (Cathode) → 10kΩ Resistor → GND
+                                      ↓
+                              Arduino Pin A0 (Analog In)
+```
+
+**Pin Assignments:**
+- `LED_PIN = 9` - PWM output for LED control
+- `PHOTO_PIN = A0` - Analog input for photodiode reading
+
+**Notes:**
+- The 405nm LED is pulsed via PWM at frequencies from 100Hz to 20kHz
+- The BPW34 photodiode converts light intensity to voltage (0-3.3V)
+- The 10kΩ load resistor provides the voltage divider for analog reading
+- All components share common GND with Arduino GIGA
 
 ### Software Setup
 

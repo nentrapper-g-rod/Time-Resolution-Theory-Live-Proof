@@ -21,7 +21,7 @@
     "passed": true,
     "mean_voltage": 0.106293,
     "min_voltage": 0.06044,
-    "max_voltage": 0.14424,
+    "max_voltage": 0.144249,
     "variance": 0.00059681
   },
   "wifi": {

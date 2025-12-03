@@ -6,28 +6,28 @@
   },
   "hardware_health_check": {
     "passed": true,
-    "dark_voltage": 0.12094,
-    "light_voltage": 0.411723,
-    "range": 0.290783
+    "dark_voltage": 0.120802,
+    "light_voltage": 0.411777,
+    "range": 0.290975
   },
   "calibration": {
-    "dark_voltage": 0.120676,
-    "light_voltage": 0.41175,
-    "target_50_percent": 0.266213,
-    "calibrated_pwm": 66,
-    "actual_50_percent": 0.266939
+    "dark_voltage": 0.120419,
+    "light_voltage": 0.411765,
+    "target_50_percent": 0.266092,
+    "calibrated_pwm": 64,
+    "actual_50_percent": 0.265363
   },
   "baseline_test": {
     "passed": true,
-    "mean_voltage": 0.109927,
-    "min_voltage": 0.050769,
-    "max_voltage": 0.144249,
-    "variance": 0.00044378
+    "mean_voltage": 0.10945,
+    "min_voltage": 0.041905,
+    "max_voltage": 0.141026,
+    "variance": 0.00045767
   },
   "wifi": {
     "connected": true,
     "ssid": "Girod-House-of-Big-Nuts",
     "ip_address": "192.168.1.91",
-    "rssi_dbm": -63
+    "rssi_dbm": -58
   }
 }

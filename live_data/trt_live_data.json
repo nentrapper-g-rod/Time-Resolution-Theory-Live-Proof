@@ -1,33 +1,5 @@
 {
-  "timestamp": "2025-12-01T09:32:07Z",
-  "timestamp_ms": 34327196,
-  "cycle": 16,
-  "phase": 0,
-  "phase_name": "LED OFF",
-  "ssid": "Girod-House-of-Big-Nuts",
-  "ip": "192.168.1.91",
-  "rssi": -64,
-  "samples": 19450662,
-  "runtime": 34327,
-  "mean100": 0.112966,
-  "var100": 0.00050347,
-  "mean10": 0.120315,
-  "var10": 0.00042394,
-  "mean1": 0.081392,
-  "githubStatus": "HOST_POSTS",
-  "githubCode": 0,
-  "lastSuccess": 0,
-  "baseline": {
-    "passed": true,
-    "mean": 0.112132,
-    "variance": 0.00050187,
-    "min": 0.050769,
-    "max": 0.147473
-  },
-  "hardware": {
-    "passed": true,
-    "dark": 0.124953,
-    "light": 0.411741,
-    "fifty": 0.268874
-  }
+  "samples": 19454698,
+  "runtime": 34332,
+  "timestamp": "2025-12-03T20:38:05.584205Z"
 }

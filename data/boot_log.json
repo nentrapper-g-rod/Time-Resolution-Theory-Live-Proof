@@ -28,6 +28,6 @@
     "connected": true,
     "ssid": "Girod-House-of-Big-Nuts",
     "ip_address": "192.168.1.91",
-    "rssi_dbm": -60
+    "rssi_dbm": 60
   }
 }

@@ -116,7 +116,6 @@ Each phase uploads data to separate JSON files, and graphs are auto-generated ev
 - 405 nm LED
 - BPW34 photodiode
 - 220Ω resistor (LED current limiting)
-- 10kΩ resistor (photodiode load)
 - Breadboard and jumper wires
 - WiFi network connection
 
@@ -129,9 +128,8 @@ Arduino Pin 9 (PWM) → 220Ω Resistor → 405nm LED (+) → GND
 
 **Photodiode Circuit (Analog Input):**
 ```
-+3.3V → BPW34 (Anode) → BPW34 (Cathode) → 10kΩ Resistor → GND
-                                      ↓
-                              Arduino Pin A0 (Analog In)
++3.3V → BPW34 (Anode)
+        BPW34 (Cathode) → Arduino Pin A0 (Analog In) → GND (via internal)
 ```
 
 **Pin Assignments:**
@@ -140,8 +138,8 @@ Arduino Pin 9 (PWM) → 220Ω Resistor → 405nm LED (+) → GND
 
 **Notes:**
 - The 405nm LED is pulsed via PWM at frequencies from 100Hz to 20kHz
-- The BPW34 photodiode converts light intensity to voltage (0-3.3V)
-- The 10kΩ load resistor provides the voltage divider for analog reading
+- The BPW34 photodiode operates in photoconductive mode, directly connected to analog input
+- Photodiode converts light intensity to voltage (0-3.3V range)
 - All components share common GND with Arduino GIGA
 
 ### Software Setup

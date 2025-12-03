@@ -88,7 +88,25 @@ The experiment runs **7 automated phases** in a continuous loop, each lasting 5 
 6. **Phase 5: 20 kHz** → Frequency sweep (minimal variance)
 7. **Phase 6: LIVE TRT** → Main 10 kHz experiment (runs forever)
 
-Each phase uploads data to separate JSON files, and graphs are auto-generated every 10 minutes.
+Each phase uploads data to separate JSON files, and graphs are auto-generated every 30 seconds.
+
+---
+
+## 🖥️ Live Monitoring Dashboard
+
+**A real-time web dashboard monitors all GitHub posting activity:**
+
+![Dashboard Preview](https://img.shields.io/badge/Dashboard-Live-00FF00?style=for-the-badge)
+
+**Features:**
+- 📊 Statistics: Total pushes, files posted, update interval
+- 📝 Recent push activity with file lists and timestamps
+- 📋 Live log viewer (auto-refreshes every 30s)
+- ⚙️ Editable configuration (update interval, Arduino IP, GitHub enable/disable)
+
+**Access:** The dashboard runs as a systemd service on the experiment host machine.
+
+---
 
 ## Setup & Installation
 
@@ -100,24 +118,61 @@ Each phase uploads data to separate JSON files, and graphs are auto-generated ev
 - WiFi network connection
 
 ### Software Setup
-1. Clone repository:
+
+**1. Flash Arduino with auto-validation sketch:**
    ```bash
-   git clone https://github.com/nentrapper-g-rod/Time-Resolution-Theory-Live-Proof.git
-   cd Time-Resolution-Theory-Live-Proof
+   # Open arduino_sketches/TRT_Auto_Validation/TRT_Auto_Validation.ino
+   # Update WiFi credentials
+   # Upload to Arduino GIGA R1 WiFi
    ```
 
-2. Flash Arduino with auto-validation sketch:
-   - Open `arduino/TRT_Auto_Validation.ino`
-   - Update WiFi credentials and GitHub token
-   - Upload to Arduino GIGA R1 WiFi
+**2. Set up automated services (Linux host):**
+   ```bash
+   # Clone repository
+   git clone https://github.com/nentrapper-g-rod/Time-Resolution-Theory-Live-Proof.git
+   cd Time-Resolution-Theory-Live-Proof
 
-3. Set up automated graph generation (optional):
-   - Edit `update_graphs.sh` and add your GitHub token
-   - Make executable: `chmod +x update_graphs.sh`
-   - Add to crontab: `crontab -e`
-   - Add line: `*/10 * * * * /path/to/update_graphs.sh >> ~/trt_graphs.log 2>&1`
+   # Install Flask for web dashboard
+   sudo apt-get install python3-flask
 
-4. Run: Hardware auto-updates this repo every 60 seconds with new data.
+   # Install and enable systemd services
+   sudo cp scripts/*.service /etc/systemd/system/
+   sudo systemctl daemon-reload
+   sudo systemctl enable trt-auto-update.service trt-web-dashboard.service
+   sudo systemctl start trt-auto-update.service trt-web-dashboard.service
+   ```
+
+**3. Access the monitoring dashboard:**
+   ```
+   http://localhost:5000
+   ```
+
+**Service management:**
+   ```bash
+   # Check status
+   sudo systemctl status trt-auto-update.service
+
+   # View logs
+   tail -f scripts/auto_update.log
+   tail -f scripts/web_server.log
+
+   # Restart services
+   sudo systemctl restart trt-auto-update.service
+   ```
+
+**Full service documentation:** See [scripts/SERVICE_README.md](scripts/SERVICE_README.md)
+
+### How It Works
+
+1. **Arduino** samples photodiode at three time resolutions (0.1s, 0.01s, 0.001s)
+2. **Auto-update service** polls Arduino HTTP endpoint every 30 seconds
+3. **Data** is saved locally and accumulated into rolling history (200 points)
+4. **Graphs** are regenerated with matplotlib showing mean/variance trends
+5. **Git automation** commits and pushes changes to GitHub
+6. **Web dashboard** displays push activity, logs, and editable configuration
+7. **GitHub Pages** serves the latest graphs to the world
+
+All fully automated. No human intervention required.
 
 **v2.0.0** – Auto-validation system with GIGA Display (Nov 30, 2025).
 **v1.0.0** – Initial live proof deploy (Nov 24, 2025).

@@ -1,0 +1,17 @@
+[Unit]
+Description=TRT Auto-Update Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=joshuag
+WorkingDirectory=/home/joshuag/Time-Resolution-Theory-Live-Proof
+ExecStart=/usr/bin/python3 /home/joshuag/Time-Resolution-Theory-Live-Proof/scripts/auto_update.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/joshuag/Time-Resolution-Theory-Live-Proof/scripts/auto_update.log
+StandardError=append:/home/joshuag/Time-Resolution-Theory-Live-Proof/scripts/auto_update.log
+
+[Install]
+WantedBy=multi-user.target

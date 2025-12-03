@@ -38,7 +38,7 @@ Identical behavior to the double-slit when scaled by TRT's κ = 10⁴ factor.
 ---
 
 ## 📊 LIVE AUTO-VALIDATION GRAPHS
-**Updated automatically every 10 minutes**
+**Updated automatically every 30 seconds**
 
 ### Main Experiment — TRT Live Proof (10 kHz, running forever)
 ![TRT LIVE PROOF](data/live_trt.png)
@@ -72,7 +72,7 @@ Identical behavior to the double-slit when scaled by TRT's κ = 10⁴ factor.
 **Quantum collapse = bad clock. That's it.**
 
 **Hardware:** Arduino GIGA R1 WiFi + GIGA Display Shield (480x800), 405 nm LED, BPW34 photodiode.
-**Software:** Automated 7-phase validation system, samples data, POSTs JSON to this repo every 60s.
+**Software:** Automated 7-phase validation system with systemd services pulling data every 30s and auto-pushing to GitHub.
 
 ---
 

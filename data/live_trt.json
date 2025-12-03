@@ -1,16 +1,16 @@
 {
-  "timestamp": "2025-12-01T09:26:59Z",
-  "timestamp_ms": 34019615,
-  "cycle": 15,
-  "phase": 6,
-  "phase_name": "LIVE TRT",
+  "timestamp": "2025-12-01T09:28:10Z",
+  "timestamp_ms": 34090233,
+  "cycle": 16,
+  "phase": 0,
+  "phase_name": "LED OFF",
   "ssid": "Girod-House-of-Big-Nuts",
   "ip": "192.168.1.91",
   "rssi": -64,
-  "samples": 19272532,
-  "runtime": 34019,
-  "mean100": 0.411779,
-  "var100": 1e-08,
+  "samples": 19282079,
+  "runtime": 34090,
+  "mean100": 0.411747,
+  "var100": 6e-08,
   "mean10": 0.411714,
   "var10": 6e-08,
   "mean1": 0.411795,
@@ -19,15 +19,15 @@
   "lastSuccess": 0,
   "baseline": {
     "passed": true,
-    "mean": 0.112572,
-    "variance": 0.00048191,
-    "min": 0.063663,
+    "mean": 0.112132,
+    "variance": 0.00050187,
+    "min": 0.050769,
     "max": 0.147473
   },
   "hardware": {
     "passed": true,
-    "dark": 0.125152,
-    "light": 0.411768,
+    "dark": 0.124953,
+    "light": 0.411741,
     "fifty": 0.268874
   }
 }

@@ -1,20 +1,6 @@
 {
   "pushes": [
     {
-      "timestamp": "2025-12-03 06:54:06",
-      "files": [
-        "data/control_off.png",
-        "data/control_on.png",
-        "data/history.json",
-        "data/live_trt.json",
-        "data/live_trt.png",
-        "data/sweep_100hz.png",
-        "data/sweep_1khz.png",
-        "live_data/trt_live_data.json",
-        "scripts/activity.json"
-      ]
-    },
-    {
       "timestamp": "2025-12-03 06:54:40",
       "files": [
         "data/control_off.png",
@@ -1394,10 +1380,24 @@
         "data/sweep_1khz.png",
         "live_data/trt_live_data.json"
       ]
+    },
+    {
+      "timestamp": "2025-12-03 07:55:46",
+      "files": [
+        "data/control_off.png",
+        "data/control_on.png",
+        "data/history.json",
+        "data/live_trt.json",
+        "data/live_trt.png",
+        "data/sweep_100hz.png",
+        "data/sweep_1khz.png",
+        "live_data/trt_live_data.json",
+        "scripts/activity.json"
+      ]
     }
   ],
   "stats": {
-    "total_pushes": 816,
-    "total_files": 7297
+    "total_pushes": 817,
+    "total_files": 7306
   }
 }

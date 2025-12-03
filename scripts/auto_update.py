@@ -141,11 +141,34 @@ def push_to_github():
             )
 
             # Pull before pushing (in case of remote changes)
-            subprocess.run(
+            pull_result = subprocess.run(
                 ["git", "pull", "origin", "main", "--no-rebase"],
                 cwd=REPO_DIR,
-                check=True
+                capture_output=True,
+                text=True
             )
+
+            # Check for merge conflicts
+            if pull_result.returncode != 0 and "CONFLICT" in pull_result.stdout:
+                print("⚠️  Merge conflict detected, resolving...")
+
+                # Fetch latest data from Arduino to resolve conflict
+                config = load_config()
+                data = fetch_arduino_data(config['arduino_ip'])
+                if data:
+                    # Write latest data to resolve conflict
+                    conflict_file = REPO_DIR / "live_data" / "trt_live_data.json"
+                    with open(conflict_file, 'w') as f:
+                        json.dump(data, f, indent=2)
+
+                    # Add resolved file and commit
+                    subprocess.run(["git", "add", str(conflict_file)], cwd=REPO_DIR, check=True)
+                    subprocess.run(
+                        ["git", "commit", "-m", f"Resolve merge conflict with latest Arduino data\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>"],
+                        cwd=REPO_DIR,
+                        check=True
+                    )
+                    print("✓ Conflict resolved")
 
             # Push
             subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR, check=True)

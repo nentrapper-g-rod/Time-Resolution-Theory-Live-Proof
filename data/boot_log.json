@@ -6,9 +6,9 @@
   },
   "hardware_health_check": {
     "passed": true,
-    "dark_voltage": 0.119459,
-    "light_voltage": 0.411527,
-    "range": 0.292068
+    "dark_voltage": 0.119555,
+    "light_voltage": 0.411523,
+    "range": 0.291969
   },
   "calibration": {
     "dark_voltage": 0.120419,
@@ -19,10 +19,10 @@
   },
   "baseline_test": {
     "passed": true,
-    "mean_voltage": 0.106339,
-    "min_voltage": 0.044322,
-    "max_voltage": 0.143443,
-    "variance": 0.0006255
+    "mean_voltage": 0.10578,
+    "min_voltage": 0.03707,
+    "max_voltage": 0.145055,
+    "variance": 0.00067487
   },
   "wifi": {
     "connected": true,

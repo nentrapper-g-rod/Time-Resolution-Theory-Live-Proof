@@ -1,14 +1,14 @@
 {
-  "timestamp": "2025-12-01T11:58:40Z",
-  "timestamp_ms": 43120751,
+  "timestamp": "2025-12-01T11:58:43Z",
+  "timestamp_ms": 43123769,
   "cycle": 20,
   "phase": 1,
   "phase_name": "LED ON",
   "ssid": "Girod-House-of-Big-Nuts",
   "ip": "192.168.1.91",
   "rssi": -64,
-  "samples": 24343348,
-  "runtime": 43120,
+  "samples": 24344034,
+  "runtime": 43123,
   "mean100": 0.411795,
   "var100": 0.0,
   "mean10": 0.411795,
@@ -26,7 +26,7 @@
   },
   "hardware": {
     "passed": true,
-    "dark": 0.126832,
+    "dark": 0.12632,
     "light": 0.411792,
     "fifty": 0.268874
   }

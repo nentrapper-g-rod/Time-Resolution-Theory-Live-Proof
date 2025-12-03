@@ -1,18 +1,18 @@
 {
   "cycle": 0,
   "timestamp_s": 45,
-  "timestamp_ms": 45626,
+  "timestamp_ms": 45022,
   "baseline_test": {
     "passed": true,
-    "mean_voltage": 0.111574,
-    "min_voltage": 0.076557,
-    "max_voltage": 0.138608,
-    "variance": 0.00022678
+    "mean_voltage": 0.109764,
+    "min_voltage": 0.050769,
+    "max_voltage": 0.147473,
+    "variance": 0.00046183
   },
   "hardware_test": {
     "passed": true,
-    "dark_voltage": 0.120705,
-    "light_voltage": 0.409331,
-    "fifty_percent": 0.264914
+    "dark_voltage": 0.120942,
+    "light_voltage": 0.411790,
+    "fifty_percent": 0.266501
   }
 }

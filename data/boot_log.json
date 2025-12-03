@@ -11,7 +11,7 @@
     "range": 0.286615
   },
   "calibration": {
-    "dark_voltage": 0.12568,
+    "dark_voltage": 0.125568,
     "light_voltage": 0.411795,
     "target_50_percent": 0.268682,
     "calibrated_pwm": 63,

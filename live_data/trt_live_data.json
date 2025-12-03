@@ -1,33 +1,5 @@
 {
-  "timestamp": "2025-12-01T04:44:48Z",
-  "timestamp_ms": 17088251,
-  "cycle": 8,
-  "phase": 0,
-  "phase_name": "LED OFF",
-  "ssid": "",
-  "ip": "192.168.1.",
-  "rssi": -62,
-  "samples": 9898993,
-  "runtime": 17091,
-  "mean100": 0.106591,
-  "var100": 0.00058014,
-  "mean10": 0.092674,
-  "var10": 0.00038614,
-  "mean1": 0.128132,
-  "githubStatus": "HOST_POSTS",
-  "githubCode": 0,
-  "lastSuccess": 0,
-  "baseline": {
-    "passed": true,
-    "mean": 0.106293,
-    "variance": 0.00059681,
-    "min": 0.06044,
-    "max": 0.144249
-  },
-  "hardware": {
-    "passed": true,
-    "dark": 0.119522,
-    "light": 0.409302,
-    "fifty": 0.268874
-  }
+  "samples": 9911844,
+  "runtime": 17108,
+  "timestamp": "2025-12-03T15:51:02.075600Z"
 }

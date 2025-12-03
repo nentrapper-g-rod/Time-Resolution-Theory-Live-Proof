@@ -119,7 +119,9 @@ Each phase uploads data to separate JSON files, and graphs are auto-generated ev
 - Breadboard and jumper wires
 - WiFi network connection
 
-### Hardware Wiring
+### Hardware Wiring & Assembly
+
+#### Electrical Connections
 
 **LED Circuit (PWM Output):**
 ```
@@ -136,10 +138,112 @@ Arduino Pin 9 (PWM) → 220Ω Resistor → 405nm LED (+) → GND
 - `LED_PIN = 9` - PWM output for LED control
 - `PHOTO_PIN = A0` - Analog input for photodiode reading
 
+#### Physical Assembly - Light-Tight Enclosure
+
+**Side View (Cross Section)**
+
+```
+                         [LED 405nm]
+                             |
+                             v
+                    ___________________
+                   |                   |
+                   |   1" large shrink |
+                   |       tubing      |
+                   |                   |
+                   |                   |
+                   |                   |
+                   |                   |
+                   |_______   _________|
+                          | |
+                 _________|_|_________
+                |                     |
+         _______|_____         _______|_______
+        |             |       |               |
+        | ½" shrink   |       | ½" shrink     |
+        |   tubing    |       |   tubing      |
+        |             |       |               |
+        |   [BPW34]   |       |   [BPW34]     |
+        |   Sensor A  |       |   Sensor B    |
+        |_____________|       |_______________|
+```
+
+**Top View (Looking Down Into Tube)**
+
+```
+         _______________________
+        /                       \
+       |     1" large tubing     |
+       |                         |
+       |    _______   _______    |
+       |   /       \ /       \   |
+       |  | Sensor | | Sensor |  |
+       |  |   A    | |   B    |  |
+       |   \_______/ \_______/   |
+       |                         |
+       |   ← ½" tubes inside →   |
+        \_______________________/
+```
+
+**3D-ish View**
+
+```
+              ____
+             /    \  ← LED here
+            |      |
+            |      |  1" large
+            |      |  shrink tube
+            |      |
+            |______|
+            /      \
+           /        \
+         _/          \_
+        | |          | |
+        | |          | |  ½" small
+        | |          | |  shrink tubes
+        |_|          |_|
+        [A]          [B]
+       sensor      sensor
+```
+
+**Assembly Steps**
+
+| Step | Action |
+|------|--------|
+| 1 | Cut two ½" pieces of small shrink tubing |
+| 2 | Slide one over each BPW34 sensor (face pointing up) |
+| 3 | Heat shrink to grip sensor body |
+| 4 | Cut one 1" piece of larger shrink tubing |
+| 5 | Insert both sensor tubes side by side into large tube |
+| 6 | Heat shrink large tube around both small tubes |
+| 7 | Insert LED into top of large tube |
+| 8 | Heat shrink to seal LED in place |
+
+**Diameter Guide**
+
+```
+Large tube (1")     Small tubes (½" each)
+      |                    |
+      v                    v
+   _______              _______
+  /       \            |       |
+ |  ~8mm   |           | ~4mm  |
+ |  inner  |           | inner |
+  \_______/            |_______|
+      |                    |
+      |                    |
+ fits both             fits one
+ small tubes           BPW34
+ + LED
+```
+
 **Notes:**
 - The 405nm LED is pulsed via PWM at frequencies from 100Hz to 20kHz
 - The BPW34 photodiode operates in photoconductive mode, directly connected to analog input
-- Photodiode converts light intensity to voltage (0-3.3V range)
+- BPW34 is approximately 3mm wide, requiring 4-5mm inner diameter shrink tubing
+- Large tube needs 10-12mm inner diameter to fit two small tubes plus LED
+- Heat shrink creates a light-tight seal to prevent ambient light interference
+- Dual sensor configuration allows for redundancy and differential measurements
 - All components share common GND with Arduino GIGA
 
 ### Software Setup

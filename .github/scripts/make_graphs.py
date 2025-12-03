@@ -46,7 +46,21 @@ for json_file, png_file, title, color in files:
         print(f"Error reading {json_file}: {e}")
         continue
 
-    # Extract data - handle both single entry and history array
+    # Build accumulated history
+    history_key = json_file.replace('.json', '_history')
+    if history_key not in history_data:
+        history_data[history_key] = []
+
+    # Add current data point to history
+    if "history" in data:
+        # Already has history, use it
+        history_data[history_key] = data["history"][-200:]
+    else:
+        # Single data point - append to accumulated history
+        history_data[history_key].append(data)
+        history_data[history_key] = history_data[history_key][-200:]  # Keep last 200
+
+    # Extract data from history
     times = []
     mean100 = []
     var100 = []
@@ -54,11 +68,7 @@ for json_file, png_file, title, color in files:
     var10 = []
     mean1 = []
 
-    # Check if we have a history array
-    if "history" in data:
-        entries = data["history"][-200:]  # Last 200 points
-    else:
-        entries = [data]  # Single data point
+    entries = history_data[history_key]
 
     for i, entry in enumerate(entries):
         # Use index as time if no timestamp
@@ -116,5 +126,10 @@ for json_file, png_file, title, color in files:
     plt.savefig(output_path, dpi=200, facecolor='#1a1a1a', edgecolor='none')
     plt.close()
     print(f"✓ Generated {png_file}")
+
+# Save accumulated history for next run
+with open(history_file, 'w') as f:
+    json.dump(history_data, f, indent=2)
+print(f"✓ Saved history ({len(history_data)} datasets)")
 
 print("\n✅ All TRT graphs updated!")

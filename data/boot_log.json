@@ -7,7 +7,7 @@
   "hardware_health_check": {
     "passed": true,
     "dark_voltage": 0.123837,
-    "light_voltage": 0.4114,
+    "light_voltage": 0.411794,
     "range": 0.287957
   },
   "calibration": {

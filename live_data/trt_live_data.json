@@ -1,33 +1,5 @@
 {
-  "timestamp": "2025-12-01T02:19:59Z",
-  "timestamp_ms": 8399534,
-  "cycle": 3,
-  "phase": 6,
-  "phase_name": "LIVE TRT",
-  "ssid": "Girod-House-of-Big-Nuts",
-  "ip": "192.168.1.91",
-  "rssi": -67,
-  "samples": 4533006,
-  "runtime": 8399,
-  "mean100": 0.411747,
-  "var100": 9e-08,
-  "mean10": 0.411795,
-  "var10": 0.0,
-  "mean1": 0.411795,
-  "githubStatus": "HOST_POSTS",
-  "githubCode": 0,
-  "lastSuccess": 0,
-  "baseline": {
-    "passed": true,
-    "mean": 0.113133,
-    "variance": 0.00024655,
-    "min": 0.063663,
-    "max": 0.138608
-  },
-  "hardware": {
-    "passed": true,
-    "dark": 0.123478,
-    "light": 0.411774,
-    "fifty": 0.268553
-  }
+  "samples": 4548320,
+  "runtime": 8428,
+  "timestamp": "2025-12-04T02:45:02.425732Z"
 }

@@ -1,14 +1,6 @@
 {
   "pushes": [
     {
-      "timestamp": "2025-12-03 15:34:51",
-      "files": [
-        "data/live_trt.json",
-        "live_data/trt_live_data.json",
-        "scripts/activity.json"
-      ]
-    },
-    {
       "timestamp": "2025-12-03 15:36:38",
       "files": [
         "data/control_off.png",
@@ -1388,10 +1380,24 @@
         "live_data/trt_live_data.json",
         "scripts/activity.json"
       ]
+    },
+    {
+      "timestamp": "2025-12-03 16:44:59",
+      "files": [
+        "data/control_off.png",
+        "data/control_on.png",
+        "data/history.json",
+        "data/live_trt.json",
+        "data/live_trt.png",
+        "data/sweep_100hz.png",
+        "data/sweep_1khz.png",
+        "live_data/trt_live_data.json",
+        "scripts/activity.json"
+      ]
     }
   ],
   "stats": {
-    "total_pushes": 1592,
-    "total_files": 14228
+    "total_pushes": 1593,
+    "total_files": 14237
   }
 }

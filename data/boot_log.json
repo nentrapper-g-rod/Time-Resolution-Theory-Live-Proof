@@ -6,23 +6,23 @@
   },
   "hardware_health_check": {
     "passed": true,
-    "dark_voltage": 0.124398,
-    "light_voltage": 0.411783,
-    "range": 0.287385
+    "dark_voltage": 0.124228,
+    "light_voltage": 0.411471,
+    "range": 0.287242
   },
   "calibration": {
-    "dark_voltage": 0.124191,
-    "light_voltage": 0.411784,
-    "target_50_percent": 0.267988,
-    "calibrated_pwm": 64,
-    "actual_50_percent": 0.266826
+    "dark_voltage": 0.123988,
+    "light_voltage": 0.411504,
+    "target_50_percent": 0.267746,
+    "calibrated_pwm": 66,
+    "actual_50_percent": 0.268392
   },
   "baseline_test": {
     "passed": true,
-    "mean_voltage": 0.113882,
-    "min_voltage": 0.073333,
-    "max_voltage": 0.137802,
-    "variance": 0.00015729
+    "mean_voltage": 0.113908,
+    "min_voltage": 0.083004,
+    "max_voltage": 0.141026,
+    "variance": 0.00017444
   },
   "wifi": {
     "connected": true,
